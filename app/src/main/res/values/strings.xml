@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Yet Another Fitness Tracker</string>
+    <string name="title_activity">Activity</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="not_a_member_yet">Not a member yet? Register now and stay Fit!</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="title_community">Community</string>
+    <string name="navigation_drawer_open">Navigation Drawer Open</string>
+    <string name="navigation_drawer_close">Navigation Drawer Close</string>
+    <string name="preference_file_key">team.charlie.yetanotherfitnesstracker.PREFERENCES</string>
+    <string name="search_hint">Search Names</string>
+</resources>

@@ -1,0 +1,5 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_user_profile_margin">50dp</dimen>
+    <dimen name="activity_contest_margin">20dp</dimen>
+</resources>

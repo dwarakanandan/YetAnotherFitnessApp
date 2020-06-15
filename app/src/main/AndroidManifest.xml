@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="team.charlie.yetanotherfitnesstracker">
+
+    <uses-feature
+        android:name="android.hardware.sensor.accelerometer"
+        android:required="true" />
+
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:icon="@mipmap/ic_run_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_run_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".ui.history.HistoryActivity"></activity>
+        <activity android:name=".ui.community.contests.AddContestActivity" />
+        <activity android:name=".ui.community.contests.ContestDetailsActivity" />
+        <activity android:name=".ui.AchievementsActivity" />
+        <activity
+            android:name=".ui.weightTracking.AddNewWeightActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog" />
+        <activity android:name=".ui.weightTracking.WeightTrackingActivity" />
+        <activity android:name=".ui.MapViewFullDayActivity" />
+        <activity android:name=".ui.UserProfileActivity" />
+        <activity android:name=".ui.FitnessActivityDetailsActivity" />
+        <activity android:name=".ui.history.WeeklyHistoryActivity" />
+        <activity android:name=".ui.community.friends.SearchAllFriendsFragment" />
+        <activity android:name=".ui.community.friends.FriendsAchievementActivity"/>
+        <activity android:name=".ui.MapViewActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DashboardActivity"
+            android:label="Dashboard" />
+        <activity
+            android:name=".RegisterActivity"
+            android:label="Register" />
+
+        <service android:name=".ActivityTransitionReceiverService" />
+
+        <receiver
+            android:name=".LocationReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="team.charlie.yetanotherfitnesstracker.LOCATION_UPDATE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".BackupTaskReceiver" />
+        <receiver android:name=".InactiveStatusCheckReceiver" />
+        <receiver android:name=".FitnessAppWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/fitness_app_widget_info" />
+        </receiver>
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyB3ZYo-4nJKj5wD_m4PtUJKExmOgHr-di8" />
+    </application>
+
+</manifest>

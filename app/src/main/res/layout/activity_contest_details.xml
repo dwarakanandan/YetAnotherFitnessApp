@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_main_primary"
+    android:padding="10dp"
+    tools:context=".ui.community.contests.ContestDetailsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/activity_contest_details_image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_contest_public" />
+
+        <TextView
+            android:id="@+id/activity_contest_details_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Name"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/activity_contest_details_image"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/activity_contest_details_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:text="Description"
+            app:layout_constraintStart_toEndOf="@+id/activity_contest_details_image"
+            app:layout_constraintTop_toBottomOf="@+id/activity_contest_details_name" />
+
+        <TextView
+            android:id="@+id/activity_contest_details_creator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Creator: example@example.com"
+            app:layout_constraintStart_toEndOf="@+id/activity_contest_details_image"
+            app:layout_constraintTop_toBottomOf="@+id/activity_contest_details_description" />
+
+        <TextView
+            android:id="@+id/activity_contest_details_type"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:background="@color/app_main_secondary"
+            android:gravity="center"
+            android:text="PUBLIC"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/activity_contest_details_image_goal_type"
+            app:layout_constraintEnd_toEndOf="@+id/activity_contest_details_image"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/activity_contest_details_image_goal_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toEndOf="@+id/activity_contest_details_image"
+            app:layout_constraintTop_toBottomOf="@+id/activity_contest_details_creator"
+            app:srcCompat="@drawable/ic_steps" />
+
+        <TextView
+            android:id="@+id/activity_contest_details_goal_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="STEPS"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/activity_contest_details_image_goal_type"
+            app:layout_constraintStart_toEndOf="@+id/activity_contest_details_image_goal_type"
+            app:layout_constraintTop_toTopOf="@+id/activity_contest_details_image_goal_type" />
+
+        <TextView
+            android:id="@+id/activity_contest_details_goal_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="Goal:  10000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/activity_contest_details_image_goal_type"
+            app:layout_constraintStart_toEndOf="@+id/activity_contest_details_goal_type"
+            app:layout_constraintTop_toTopOf="@+id/activity_contest_details_image_goal_type" />
+
+        <TextView
+            android:id="@+id/textView37"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_contest_details_image_goal_type"
+            app:layout_constraintVertical_bias="0.39" />
+
+        <TextView
+            android:id="@+id/activity_contest_details_start_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="03/01/2020 03:30 AM"
+            app:layout_constraintBottom_toBottomOf="@+id/textView37"
+            app:layout_constraintStart_toEndOf="@+id/textView37"
+            app:layout_constraintTop_toTopOf="@+id/textView37" />
+
+        <TextView
+            android:id="@+id/textView39"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="End"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textView37"
+            app:layout_constraintTop_toBottomOf="@+id/textView37" />
+
+        <TextView
+            android:id="@+id/activity_contest_details_end_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="05/01/2020 03:30 AM"
+            app:layout_constraintStart_toStartOf="@+id/activity_contest_details_start_day"
+            app:layout_constraintTop_toBottomOf="@+id/activity_contest_details_start_day" />
+
+        <Button
+            android:id="@+id/activity_contest_details_join_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/app_main_secondary"
+            android:text="Join"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_contest_details_image_goal_type" />
+
+        <ImageView
+            android:id="@+id/activity_contest_details_join_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_contest_details_image_goal_type"
+            app:srcCompat="@drawable/ic_joined" />
+
+        <TextView
+            android:id="@+id/activity_contest_details_goal_meters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="(m)"
+            app:layout_constraintBottom_toBottomOf="@+id/activity_contest_details_goal_value"
+            app:layout_constraintStart_toEndOf="@+id/activity_contest_details_goal_value"
+            app:layout_constraintTop_toTopOf="@+id/activity_contest_details_goal_value" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/activity_contest_details_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/app_main_secondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/activity_contest_details_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.65"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_contest_details_tab_layout" />
+</androidx.constraintlayout.widget.ConstraintLayout>
